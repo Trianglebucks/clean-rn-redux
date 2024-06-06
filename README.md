@@ -1,4 +1,4 @@
-Personal template that cointains Expo Go, Typescript, and Zustand. Also includes prettier and eslint setup boilerplate.
+Personal template that cointains Expo Go, Typescript, and Zustand. Also includes prettier, husky and eslint setup boilerplate.
 
 # Getting Started
 
@@ -121,66 +121,3 @@ Added pre-commit validation
 5. You should be able to see .husky folder
 6. Install .husky dependencies `yarn install`
 7. Add pre-commit hook `npx husky add .husky/pre-commit "yarn lint-staged"`
-
-## Step 4: Setup alias
-
-Setting up paths alias for import convenience
-
-1. Install Babel Plugin Module Resolver as dev dependencies. `yarn add babel-plugin-module-resolver --dev`
-2. Modify tsconfig.json
-
-```bash
-{
-  "extends": "@tsconfig/react-native/tsconfig.json",
-  "compilerOptions": {
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "@mocks/*": ["./__mocks__/*"],
-      "@tests/*": ["./__tests__/*"],
-      "@temps/*": ["./__temps__/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@components/*": ["./src/components/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@navigation/*": ["./src/navigation/*"],
-      "@redux/*": ["./src/redux/*"],
-      "@screens/*": ["./src/screens/*"],
-      "@shared/*": ["./src/shared/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@themes/*": ["./src/themes/*"]
-    }
-  }
-}
-```
-
-3. Modify babel.config.js
-
-```bash
-module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
-  plugins: [
-    'react-native-reanimated/plugin',
-    [
-      'module-resolver',
-      {
-        root: ['.'],
-        alias: {
-          '@mocks': './__mocks__',
-          '@tests': './__tests__',
-          '@temps': './__temps__',
-          '@assets': './src/assets',
-          '@components': './src/components',
-          '@navigation': './src/navigation',
-          '@redux': './src/redux',
-          '@screens': './src/screens',
-          '@shared': './src/shared',
-          '@utils': './src/utils',
-          '@styles': './src/styles',
-          '@themes': './src/themes',
-        },
-      },
-    ],
-  ],
-};
-```
