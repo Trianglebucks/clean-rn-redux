@@ -1,4 +1,4 @@
-Personal boilerplate that cointains Expo Go, Typescript, and Zustand. Also includes prettier and eslint setup.
+Personal template that cointains Expo Go, Typescript, and Zustand. Also includes prettier and eslint setup boilerplate.
 
 # Getting Started
 
