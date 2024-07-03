@@ -1,4 +1,4 @@
-Personal template that cointains Expo Go, Typescript, and Zustand. Also includes prettier, husky and eslint setup boilerplate.
+Personal template that cointains Expo Go, Typescript, and Redux Toolkit. Also includes prettier, husky and eslint setup boilerplate.
 
 # Getting Started
 
