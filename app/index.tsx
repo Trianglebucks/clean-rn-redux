@@ -6,6 +6,7 @@ const HomePage = () => {
   const count = useSampleStore((state) => state.count);
   const increment = useSampleStore((state) => state.increment);
   const decrement = useSampleStore((state) => state.decrement);
+
   const reset = useSampleStore((state) => state.reset);
   return (
     <View style={styles.container}>
