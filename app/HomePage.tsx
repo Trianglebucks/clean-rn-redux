@@ -18,7 +18,7 @@ const HomePage = () => {
   return (
     <View style={styles.container}>
       <Text style={[styles.textCenter, { marginVertical: 10, marginHorizontal: 50 }]}>
-        Hello, This is a boilerplate with Zustand as State Management and Expo Router
+        Hello, This is a boilerplate with Redux Toolkit as State Management and Expo Router
       </Text>
 
       <Text style={styles.textCenter}>Test the zustand count state: {count}</Text>
